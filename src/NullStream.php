@@ -74,6 +74,6 @@ class NullStream implements StreamInterface
 
     public function getMetadata($key = null)
     {
-        return $key ? null : [];
+        return $key ? null : array();
     }
 }

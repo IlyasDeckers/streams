@@ -25,11 +25,12 @@ class Utils
     {
         $ex = null;
         set_error_handler(function () use ($filename, $mode, &$ex) {
-            $ex = new \RuntimeException(sprintf(
+            $functionArguments = func_get_args();
+        	$ex = new \RuntimeException(sprintf(
                 'Unable to open %s using mode %s: %s',
                 $filename,
                 $mode,
-                func_get_args()[1]
+				$functionArguments[1]
             ));
         });
 
@@ -191,7 +192,7 @@ class Utils
      * @see GuzzleHttp\Stream\Stream::factory
      * @see GuzzleHttp\Stream\Stream::__construct
      */
-    public static function create($resource, array $options = [])
+    public static function create($resource, array $options = array())
     {
         return Stream::factory($resource, $options);
     }
