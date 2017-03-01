@@ -1,5 +1,5 @@
 {
-    "name": "guzzlehttp/streams",
+    "name": "nbj/streams",
     "description": "Provides a simple abstraction over streams of data",
     "homepage": "http://guzzlephp.org/",
     "keywords": ["stream", "guzzle"],
